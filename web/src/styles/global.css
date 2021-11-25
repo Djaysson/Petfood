@@ -13,6 +13,8 @@
   /* button */
   --secondary-color: #f0555f;
   --border-color-secondary: #f0555f;
+
+  --primary-badge: #83d0733f;
 }
 
 html,
@@ -23,16 +25,19 @@ body {
   letter-spacing: -0.03em;
 }
 input[type="text"],
+input[type="number"],
 input[type="email"],
 input[type="password"],
 input[type="date"] {
   font-size: 15px;
 }
 input[type="text"],
+input[type="number"],
 input[type="email"],
 input[type="password"],
 input[type="date"],
 input[type="text"]:disabled,
+input[type="number"]:disabled,
 input[type="email"]:disabled,
 input[type="password"]:disabled,
 input[type="date"]:disabled {
@@ -42,10 +47,25 @@ input[type="date"]:disabled {
   color: var(--color-input);
 }
 .btn {
-  font-size: 15px;
+  font-size: 16px;
+}
+.btn-secondary.rounded-circle {
+  padding: 6px 14px;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
 }
 .bg-secondary {
   background-color: var(--secondary-color) !important;
+}
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:disabled,
+.btn-primary:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color);
 }
 
 .btn-secondary,
@@ -59,6 +79,19 @@ input[type="date"]:disabled {
 
 .bg-primary {
   background-color: var(--primary-color) !important;
+}
+.badge {
+  font-weight: lighter;
+}
+
+.badge.badge-primary {
+  background: var(--primary-badge);
+  color: var(--primary-color);
+}
+
+.badge.badge-secondary {
+  background: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .img {

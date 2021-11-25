@@ -1,0 +1,5 @@
+.img-fluid {
+  max-width: 100px !important;
+  height: 100px !important;
+  border: 1px solid #c11;
+}
