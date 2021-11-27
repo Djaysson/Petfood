@@ -3,6 +3,9 @@
 :root {
   /* Geral */
   --primary-color: #83d073;
+  --secondary-color: #f0555f;
+
+  /* box color */
   --box-color: #fff;
 
   /* input */
@@ -11,10 +14,15 @@
   --border-color: #dcdcdc;
 
   /* button */
-  --secondary-color: #f0555f;
   --border-color-secondary: #f0555f;
 
-  --primary-badge: #83d0733f;
+  /* price button // frete grátis*/
+  --primary-badge: #83d0733d;
+  --primary-badge2: #30be13;
+
+  /* icons color */
+  --icon-color: #626264;
+  --icon-color2: #facd5d;
 }
 
 html,
@@ -86,7 +94,7 @@ input[type="date"]:disabled {
 
 .badge.badge-primary {
   background: var(--primary-badge);
-  color: var(--primary-color);
+  color: var(--primary-badge2);
 }
 
 .badge.badge-secondary {
