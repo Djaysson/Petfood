@@ -4,7 +4,7 @@ import Illustration from "../../assets/illustration-1.svg";
 const Cadastro = () => {
   return (
     <div className="container-fluid  h-100 bg-primary ">
-      <Header darkVersion />
+      <Header darkVersion hideCart />
       <div className="row align-items-center text-center  ">
         <div className="col-6 text-right my-auto">
           <img

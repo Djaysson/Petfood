@@ -15,8 +15,8 @@
   display: block;
 }
 .product-list button {
-  position: absolute;
-  right: 30px;
+  position: relative;
+  right: -10px;
   padding: 1px 14px;
   font: 25px;
   margin-top: 20px;
