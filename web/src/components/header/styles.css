@@ -1,3 +1,7 @@
+.header {
+  height: 120px;
+}
+
 .cart-button {
   position: relative;
   float: right;

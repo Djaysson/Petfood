@@ -10,7 +10,7 @@ const Header = ({ darkVersion, hideCart }) => {
 
   return (
     <div className="col-12">
-      <header className="py-2 px-2 text-center">
+      <header className="py-2 px-2 text-center header">
         <img
           src={darkVersion ? Logo2 : Logo}
           className="img-fluid"
