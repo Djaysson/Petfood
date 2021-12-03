@@ -5,7 +5,7 @@ const Map = () => {
   return (
     <div className="container-map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_KEY }}
         center={{
           lat: -3.776798,
           lng: -38.5619116,
