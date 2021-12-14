@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
-const URL = "mongodb://localhost/petfood";
+const URI = "mongodb://localhost/petfood";
+
+mongoose.set("debug", true);
 
 mongoose
-  .connect(URL)
+  .connect(URI)
   .then(() => console.log("DB is up"))
   .catch((err) => console.log(err));
