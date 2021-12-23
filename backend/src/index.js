@@ -5,6 +5,7 @@ const morgan = require("morgan");
 
 //database
 require("./database");
+require("dotenv").config();
 
 app.set("port", process.env.PORT || 8000);
 app.use(cors());
