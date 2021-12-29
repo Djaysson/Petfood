@@ -50,4 +50,15 @@ module.exports = {
       return { error: true, message: err.message };
     }
   },
+  createSplitTransaction: async (data) => {
+    try {
+      const response = await api.post("/transactions", {
+        api_key,
+        ...data,
+      });
+      return { error: false, data: response.data };
+    } catch (err) {
+      return { error: true, message: err.message };
+    }
+  },
 };
