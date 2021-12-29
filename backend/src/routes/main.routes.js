@@ -1,9 +1,37 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+const Petshop = require("../models/petshop");
+const Product = require("../models/product");
+
+const createSplitTransaction =
+  require("../services/pagarme").createSplitTransaction;
+
+router.get("/petshops", async (req, res) => {
   try {
-    res.json({ error: false, message: "Hello world" });
+    const petshops = await Petshop.find();
+    res.json({ error: false, petshops });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
+});
+
+router.get("/petshop/:id", async (req, res) => {
+  try {
+    const petshop = await Petshop.findById(req.params.id);
+
+    let products = await Product.find({
+      petshop_id: petshop._id,
+    });
+    res.json({ error: false, petshop: { ...petshop._doc, products } });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
+});
+router.post("/purchase", async (req, res) => {
+  try {
+    const transaction = await createSplitTransaction(req.body);
+    res.json(transaction);
   } catch (err) {
     res.json({ error: true, message: err.message });
   }
