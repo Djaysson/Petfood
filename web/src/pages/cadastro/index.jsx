@@ -1,7 +1,10 @@
+import { useState } from "react";
+
 import Header from "../../components/header/index";
 import Illustration from "../../assets/illustration-1.svg";
 
 const Cadastro = () => {
+  const [customer, setCustomer] = useState({});
   return (
     <div className="container-fluid  h-100 bg-primary ">
       <Header darkVersion hideCart />
