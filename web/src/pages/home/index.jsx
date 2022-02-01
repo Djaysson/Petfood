@@ -1,8 +1,18 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { requestPetshops } from "../../store/modules/shop/actions";
+
 import "./styles.css";
 import Header from "../../components/header/index";
 import Petshop from "../../components/petshop/index";
 import Map from "../../components/map/index";
 const Home = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(requestPetshops());
+  }, []);
+
   return (
     <div className="h-100">
       <Header hideCart />
@@ -22,3 +32,8 @@ const Home = () => {
 };
 
 export default Home;
+
+// 1ºiniciar o projeto web yarn start e iniciar o projeto backend yarn start
+// 2ºiniciar o video no momento 01:12:25
+// 3º inicar o mongodb
+//so pode da o commit quando cocluir a ação ok
